@@ -8,8 +8,14 @@ namespace CharacterCounter
 
         public Int32 Frequency { get; set; }
 
+        public CharacterFrequency ()
+        {
+            Frequency = 0;
+        }
+
         public void Increment()
         {
+            Frequency++;
         }
 
         public Boolean Equals(Char character)

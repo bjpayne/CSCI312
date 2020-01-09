@@ -1,33 +1,81 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 
 namespace CharacterCounter
 {
-  internal class Program
-  {
-    public static void Main(String[] args)
+    internal class Program
     {
-      StreamReader reader = new StreamReader("wap.txt");
+        private const String BasePath = "/Users/benjaminpayne/Apps/CSCI312/Programs/CharacterCounter/CharacterCounter/";
 
-      String contents = reader.ReadToEnd();
+        public static void Main(String[] args)
+        {
+            StreamReader reader = new StreamReader(BasePath + "wap.txt");
 
-      Int32 len = contents.Length;
-      
-      CharacterFrequency[] characterFrequencies = new CharacterFrequency[len];
-      
-      reader.Close();
+            String contents = reader.ReadToEnd();
 
-      Int32 i = 0;
+            reader.Close();
 
-      for (; i < len; i++)
-      {
-        CharacterFrequency characterFrequency = new CharacterFrequency {Character = contents[i]};
+            CharacterFrequency[] characterFrequencies = GetCharacterFrequencies(contents);
 
-        characterFrequencies[i] = characterFrequency;
-        
-        Console.WriteLine(contents[i]);
-      }
+            SetOutput(characterFrequencies);
+        }
+
+        private static CharacterFrequency[] GetCharacterFrequencies(String contents)
+        {
+            Int32 len = contents.Length;
+
+            CharacterFrequency[] characterFrequencies = new CharacterFrequency[256];
+
+            Int32 i = 0;
+
+            for (; i < len; i++)
+            {
+                Int32 j = 0;
+
+                for (; j < 256; j++)
+                {
+                    if (characterFrequencies[j] != null && characterFrequencies[j].Character.Equals(contents[i]))
+                    {
+                        characterFrequencies[j].Increment();
+
+                        break;
+                    }
+
+                    if (characterFrequencies[j] == null)
+                    {
+                        CharacterFrequency characterFrequency = new CharacterFrequency
+                            {Character = contents[i], Frequency = 1};
+
+                        characterFrequencies[j] = characterFrequency;
+
+                        break;
+                    }
+                }
+            }
+
+            return characterFrequencies;
+        }
+
+        private static void SetOutput(CharacterFrequency[] characterFrequencies)
+        {
+            StreamWriter writer = new StreamWriter(BasePath + "output.txt");
+
+            Int32 characterFrequenciesLength = characterFrequencies.Length;
+
+            Int32 i = 0;
+
+            for (; i < characterFrequenciesLength; i++)
+            {
+                if (characterFrequencies[i] == null)
+                {
+                    break;
+                }
+                
+                CharacterFrequency characterFrequency = characterFrequencies[i];
+
+                writer.WriteLine(
+                    $"{characterFrequency.Character}({(Int32) characterFrequency.Character})\t\t{characterFrequency.Frequency}");
+            }
+        }
     }
-  }
 }

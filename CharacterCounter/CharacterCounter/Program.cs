@@ -5,7 +5,9 @@ namespace CharacterCounter
 {
     internal class Program
     {
-        private const String BasePath = "/Users/benjaminpayne/Apps/CSCI312/Programs/CharacterCounter/CharacterCounter/";
+        private const String BasePath = "../../";
+
+        private const Int32 numberOfAsciiCharacters = 255;
 
         public static void Main(String[] args)
         {
@@ -15,42 +17,36 @@ namespace CharacterCounter
 
             reader.Close();
 
-            CharacterFrequency[] characterFrequencies = GetCharacterFrequencies(contents);
+            CharacterFrequency[] characterFrequencies = new CharacterFrequency[numberOfAsciiCharacters];
+
+            Int32 index = 0;
+
+            characterFrequencies = GetCharacterFrequencies(contents, characterFrequencies, index);
 
             SetOutput(characterFrequencies);
         }
 
-        private static CharacterFrequency[] GetCharacterFrequencies(String contents)
+        private static CharacterFrequency[] GetCharacterFrequencies(String contents, CharacterFrequency[] characterFrequencies, Int32 index)
         {
             Int32 len = contents.Length;
 
-            CharacterFrequency[] characterFrequencies = new CharacterFrequency[256];
+            String needle = contents[0].ToString();
 
-            Int32 i = 0;
+            String newContents = contents.Replace(needle, "");
 
-            for (; i < len; i++)
+            CharacterFrequency character = new CharacterFrequency()
             {
-                Int32 j = 0;
+                Character = contents[0],
+                Frequency = contents.Length - newContents.Length
+            };
 
-                for (; j < 256; j++)
-                {
-                    if (characterFrequencies[j] != null && characterFrequencies[j].Character.Equals(contents[i]))
-                    {
-                        characterFrequencies[j].Increment();
+            characterFrequencies[index] = character;
 
-                        break;
-                    }
+            index++;
 
-                    if (characterFrequencies[j] == null)
-                    {
-                        CharacterFrequency characterFrequency = new CharacterFrequency
-                            {Character = contents[i], Frequency = 1};
-
-                        characterFrequencies[j] = characterFrequency;
-
-                        break;
-                    }
-                }
+            if (newContents.Length != 0)
+            {
+                GetCharacterFrequencies(newContents, characterFrequencies, index);
             }
 
             return characterFrequencies;
@@ -70,12 +66,14 @@ namespace CharacterCounter
                 {
                     break;
                 }
-                
+
                 CharacterFrequency characterFrequency = characterFrequencies[i];
 
                 writer.WriteLine(
-                    $"{characterFrequency.Character}({(Int32) characterFrequency.Character})\t\t{characterFrequency.Frequency}");
+                    $"{characterFrequency.Character}({(Int32)characterFrequency.Character})\t\t{characterFrequency.Frequency}");
             }
+
+            writer.Close();
         }
     }
 }

@@ -1,0 +1,5 @@
+/Users/benjaminpayne/Apps/CSCI234/Programs/CharacterCounter/CharacterCounter/bin/Debug/CharacterCounter.exe
+/Users/benjaminpayne/Apps/CSCI234/Programs/CharacterCounter/CharacterCounter/bin/Debug/CharacterCounter.pdb
+/Users/benjaminpayne/Apps/CSCI234/Programs/CharacterCounter/CharacterCounter/obj/Debug/CharacterCounter.csprojAssemblyReference.cache
+/Users/benjaminpayne/Apps/CSCI234/Programs/CharacterCounter/CharacterCounter/obj/Debug/CharacterCounter.exe
+/Users/benjaminpayne/Apps/CSCI234/Programs/CharacterCounter/CharacterCounter/obj/Debug/CharacterCounter.pdb

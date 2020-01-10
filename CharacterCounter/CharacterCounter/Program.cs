@@ -5,56 +5,86 @@ namespace CharacterCounter
 {
     internal class Program
     {
-        private const String BasePath = "../../";
-
-        private const Int32 numberOfAsciiCharacters = 255;
+        private const Int32 NumberOfAsciiCharacters = 255;
 
         public static void Main(String[] args)
         {
-            StreamReader reader = new StreamReader(BasePath + "wap.txt");
+            try
+            {
+                String inputFile;
 
-            String contents = reader.ReadToEnd();
+                String outputFile;
+                
+                if (args.Length == 2)
+                {
+                    inputFile = args[0];
 
-            reader.Close();
+                    outputFile = args[1];
+                }
+                else
+                {
+                    Console.Write("Please provide an input file name: ");
 
-            CharacterFrequency[] characterFrequencies = new CharacterFrequency[numberOfAsciiCharacters];
+                    inputFile = Console.ReadLine();
+                    
+                    Console.Write("Please provide an output file name: ");
 
-            Int32 index = 0;
+                    outputFile = Console.ReadLine();
+                }
+                
+                StreamReader reader = new StreamReader(inputFile);
 
-            characterFrequencies = GetCharacterFrequencies(contents, characterFrequencies, index);
+                String contents = reader.ReadToEnd();
 
-            SetOutput(characterFrequencies);
+                reader.Close();
+
+                CharacterFrequency[] characterFrequencies = new CharacterFrequency[NumberOfAsciiCharacters];
+
+                characterFrequencies = ResolveCharacterCounts(contents, characterFrequencies);
+
+                SetOutput(characterFrequencies, outputFile);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
         }
 
-        private static CharacterFrequency[] GetCharacterFrequencies(String contents, CharacterFrequency[] characterFrequencies, Int32 index)
+        private static CharacterFrequency[] ResolveCharacterCounts(String haystack, CharacterFrequency[] characterFrequencies)
         {
-            Int32 len = contents.Length;
-
-            String needle = contents[0].ToString();
-
-            String newContents = contents.Replace(needle, "");
-
-            CharacterFrequency character = new CharacterFrequency()
+            Int32 index = 0;
+            
+            while (haystack.Length > 0)
             {
-                Character = contents[0],
-                Frequency = contents.Length - newContents.Length
-            };
+                // The first character in the haystack is the next character to count
+                Char needle = haystack[0];
+                
+                // Remove the needle from the haystack
+                String newHaystack = haystack.Replace(needle.ToString(), "");
+                
+                // Set the character to the needle
+                CharacterFrequency character = new CharacterFrequency()
+                {
+                    Character = needle,
+                    Frequency = haystack.Length - newHaystack.Length // Difference is the number of removed characters
+                };
+                
+                // Push the new character class onto the array
+                characterFrequencies[index] = character;
 
-            characterFrequencies[index] = character;
+                // Update the haystack with the removed character haystack
+                haystack = newHaystack;
 
-            index++;
-
-            if (newContents.Length != 0)
-            {
-                GetCharacterFrequencies(newContents, characterFrequencies, index);
+                index++;
             }
 
+            // Return all the characters
             return characterFrequencies;
         }
 
-        private static void SetOutput(CharacterFrequency[] characterFrequencies)
+        private static void SetOutput(CharacterFrequency[] characterFrequencies, String outputFile)
         {
-            StreamWriter writer = new StreamWriter(BasePath + "output.txt");
+            StreamWriter writer = new StreamWriter(outputFile);
 
             Int32 characterFrequenciesLength = characterFrequencies.Length;
 

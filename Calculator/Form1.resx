@@ -1,0 +1,765 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="fileMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 20</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton7.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="calculatorButtonDivide.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="outputScreen.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;chineeseLanguageMenuItem.Name" xml:space="preserve">
+    <value>chineeseLanguageMenuItem</value>
+  </data>
+  <data name="&gt;&gt;helpMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="calculatorButton4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 50</value>
+  </data>
+  <data name="calculatorButtonSubtract.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 50</value>
+  </data>
+  <data name="undoMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="&gt;&gt;calculatorButtonUndo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="helpMenuItem.Text" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="&gt;&gt;editMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="calculatorButton8.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;undoMenuItem.Name" xml:space="preserve">
+    <value>undoMenuItem</value>
+  </data>
+  <data name="&gt;&gt;frenchLanguageMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="mandarinLanguageMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="&gt;&gt;calculatorButtonMultiply.Name" xml:space="preserve">
+    <value>calculatorButtonMultiply</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="calculatorButton9.Text" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="frenchLanguageMenuItem.Text" xml:space="preserve">
+    <value>French</value>
+  </data>
+  <data name="chineeseLanguageMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 22</value>
+  </data>
+  <data name="calculatorButtonSubtract.Location" type="System.Drawing.Point, System.Drawing">
+    <value>183, 112</value>
+  </data>
+  <data name="calculatorButtonEquals.Text" xml:space="preserve">
+    <value>=</value>
+  </data>
+  <data name="frenchLanguageMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="calculatorButton9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 50</value>
+  </data>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 24</value>
+  </data>
+  <data name="&gt;&gt;outputScreen.Name" xml:space="preserve">
+    <value>outputScreen</value>
+  </data>
+  <data name="&gt;&gt;calculatorButtonDivide.Name" xml:space="preserve">
+    <value>calculatorButtonDivide</value>
+  </data>
+  <data name="calculatorButton1.Text" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="outputScreen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 27</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="calculatorButton7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 168</value>
+  </data>
+  <data name="calculatorButton8.Text" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;ediToolStripMenuItem.Name" xml:space="preserve">
+    <value>ediToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Form1</value>
+  </data>
+  <data name="calculatorButtonUndo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 50</value>
+  </data>
+  <data name="calculatorButton8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 50</value>
+  </data>
+  <data name="&gt;&gt;calculatorButtonEquals.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="englishLanguageMenuItem.Text" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton9.Name" xml:space="preserve">
+    <value>calculatorButton9</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton8.Name" xml:space="preserve">
+    <value>calculatorButton8</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="calculatorButtonEquals.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 107</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton5.Name" xml:space="preserve">
+    <value>calculatorButton5</value>
+  </data>
+  <data name="calculatorAdd.Text" xml:space="preserve">
+    <value>+</value>
+  </data>
+  <data name="&gt;&gt;calculatorAdd.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;calculatorAdd.Name" xml:space="preserve">
+    <value>calculatorAdd</value>
+  </data>
+  <data name="calculatorAdd.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton6.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="calculatorButton0.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="outputScreen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>221, 62</value>
+  </data>
+  <data name="languageMenuItem.Text" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="&gt;&gt;calculatorButtonDecimalPoint.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton0.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton1.Name" xml:space="preserve">
+    <value>calculatorButton1</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton8.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;outputScreen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;helpMenuItem.Name" xml:space="preserve">
+    <value>helpMenuItem</value>
+  </data>
+  <data name="calculatorButtonDecimalPoint.Text" xml:space="preserve">
+    <value>.</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton5.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="calculatorButton3.Text" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="outputScreen.WordWrap" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="exitMenuItem.Text" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="&gt;&gt;englishLanguageMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="calculatorButtonMultiply.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="calculatorButtonUndo.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="calculatorButton5.Text" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="calculatorButton6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>126, 225</value>
+  </data>
+  <data name="&gt;&gt;exitMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="calculatorButton7.Text" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;calculatorButtonClear.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="calculatorButton7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 50</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Form1</value>
+  </data>
+  <data name="calculatorButton5.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="fileMenuItem.Text" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="&gt;&gt;mandarinLanguageMenuItem.Name" xml:space="preserve">
+    <value>mandarinLanguageMenuItem</value>
+  </data>
+  <data name="&gt;&gt;calculatorButtonSubtract.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;calculatorButtonDecimalPoint.Name" xml:space="preserve">
+    <value>calculatorButtonDecimalPoint</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton4.Name" xml:space="preserve">
+    <value>calculatorButton4</value>
+  </data>
+  <data name="calculatorButtonDecimalPoint.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 50</value>
+  </data>
+  <data name="calculatorButton4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 225</value>
+  </data>
+  <data name="&gt;&gt;outputScreen.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="calculatorButton9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>126, 168</value>
+  </data>
+  <data name="calculatorButtonMultiply.Location" type="System.Drawing.Point, System.Drawing">
+    <value>126, 112</value>
+  </data>
+  <data name="&gt;&gt;editMenuItem.Name" xml:space="preserve">
+    <value>editMenuItem</value>
+  </data>
+  <data name="&gt;&gt;calculatorAdd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fileMenuItem.Name" xml:space="preserve">
+    <value>fileMenuItem</value>
+  </data>
+  <data name="calculatorButtonMultiply.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 50</value>
+  </data>
+  <data name="exitMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 22</value>
+  </data>
+  <data name="calculatorButtonMultiply.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton0.Name" xml:space="preserve">
+    <value>calculatorButton0</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton6.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="outputScreen.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;calculatorButtonDecimalPoint.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="calculatorButtonEquals.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;frenchLanguageMenuItem.Name" xml:space="preserve">
+    <value>frenchLanguageMenuItem</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton0.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="calculatorAdd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>183, 168</value>
+  </data>
+  <data name="calculatorButton3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 50</value>
+  </data>
+  <data name="&gt;&gt;languageMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;calculatorButtonEquals.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="outputScreen.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="languageMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="editMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 20</value>
+  </data>
+  <data name="&gt;&gt;calculatorButtonMultiply.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="calculatorButton2.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="calculatorButton9.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="calculatorButton2.Text" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="calculatorButton5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>69, 225</value>
+  </data>
+  <data name="&gt;&gt;ediToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton3.Name" xml:space="preserve">
+    <value>calculatorButton3</value>
+  </data>
+  <data name="&gt;&gt;calculatorButtonClear.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;mandarinLanguageMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="calculatorButton2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 50</value>
+  </data>
+  <data name="calculatorButtonUndo.Text" xml:space="preserve">
+    <value>Undo</value>
+  </data>
+  <data name="aboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="aboutMenuItem.Text" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="&gt;&gt;calculatorButtonSubtract.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton9.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton9.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton5.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;calculatorButtonDivide.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="calculatorButton3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>126, 281</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton4.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="calculatorButtonSubtract.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="calculatorButton8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>69, 168</value>
+  </data>
+  <data name="calculatorButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 50</value>
+  </data>
+  <data name="&gt;&gt;calculatorButtonUndo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;englishLanguageMenuItem.Name" xml:space="preserve">
+    <value>englishLanguageMenuItem</value>
+  </data>
+  <data name="calculatorButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 281</value>
+  </data>
+  <data name="calculatorAdd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 107</value>
+  </data>
+  <data name="calculatorButton2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 281</value>
+  </data>
+  <data name="calculatorButton6.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;calculatorButtonSubtract.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="calculatorButton0.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton6.Name" xml:space="preserve">
+    <value>calculatorButton6</value>
+  </data>
+  <data name="calculatorButtonClear.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 112</value>
+  </data>
+  <data name="calculatorButtonUndo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 112</value>
+  </data>
+  <data name="&gt;&gt;fileMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="calculatorButtonDecimalPoint.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="calculatorButton0.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 50</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton7.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="calculatorButtonEquals.Location" type="System.Drawing.Point, System.Drawing">
+    <value>183, 281</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton1.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="calculatorButton4.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton2.Name" xml:space="preserve">
+    <value>calculatorButton2</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;calculatorButtonUndo.Name" xml:space="preserve">
+    <value>calculatorButtonUndo</value>
+  </data>
+  <data name="&gt;&gt;outputScreen.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;calculatorButtonEquals.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="calculatorButtonDivide.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 50</value>
+  </data>
+  <data name="calculatorButtonClear.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="mandarinLanguageMenuItem.Text" xml:space="preserve">
+    <value>Mandarin</value>
+  </data>
+  <data name="calculatorButtonDivide.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 112</value>
+  </data>
+  <data name="&gt;&gt;aboutMenuItem.Name" xml:space="preserve">
+    <value>aboutMenuItem</value>
+  </data>
+  <data name="menuStrip1.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="calculatorButtonDecimalPoint.Location" type="System.Drawing.Point, System.Drawing">
+    <value>126, 338</value>
+  </data>
+  <data name="calculatorButton3.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="calculatorButton6.Text" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton3.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="englishLanguageMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="ediToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 20</value>
+  </data>
+  <data name="&gt;&gt;calculatorButtonClear.Name" xml:space="preserve">
+    <value>calculatorButtonClear</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton2.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>245, 400</value>
+  </data>
+  <data name="&gt;&gt;exitMenuItem.Name" xml:space="preserve">
+    <value>exitMenuItem</value>
+  </data>
+  <data name="&gt;&gt;calculatorButtonMultiply.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="calculatorButton1.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;undoMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton8.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;calculatorButtonEquals.Name" xml:space="preserve">
+    <value>calculatorButtonEquals</value>
+  </data>
+  <data name="&gt;&gt;calculatorButtonClear.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="outputScreen.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Courier New, 36pt</value>
+  </data>
+  <data name="&gt;&gt;calculatorButtonDivide.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="helpMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 20</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton7.Name" xml:space="preserve">
+    <value>calculatorButton7</value>
+  </data>
+  <data name="&gt;&gt;languageMenuItem.Name" xml:space="preserve">
+    <value>languageMenuItem</value>
+  </data>
+  <data name="calculatorButton0.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 338</value>
+  </data>
+  <data name="calculatorButtonDivide.Text" xml:space="preserve">
+    <value>/</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;calculatorButtonSubtract.Name" xml:space="preserve">
+    <value>calculatorButtonSubtract</value>
+  </data>
+  <data name="calculatorButton7.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton0.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="calculatorButtonSubtract.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="calculatorButton5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 50</value>
+  </data>
+  <data name="&gt;&gt;calculatorButtonUndo.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;calculatorButtonDecimalPoint.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;calculatorAdd.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;calculatorButtonDivide.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;calculatorButtonMultiply.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="calculatorButton6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 50</value>
+  </data>
+  <data name="&gt;&gt;chineeseLanguageMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;calculatorButton4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="calculatorButton4.Text" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;aboutMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="outputScreen.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>fr</value>
+  </metadata>
+</root>

@@ -16,11 +16,18 @@ namespace Calculator
     {
         private ComponentResourceManager resources;
 
+        private Calculator calculator;
+        private Caretaker caretaker;
+
         public Form1()
         {
             InitializeComponent();
 
             resources = new ComponentResourceManager(typeof(Form1));
+
+            calculator = new Calculator();
+
+            caretaker = new Caretaker(calculator);
 
             CultureInfo ci = CultureInfo.InstalledUICulture;
 
@@ -100,12 +107,147 @@ namespace Calculator
 
         private void undoMenuItem_Click(object sender, EventArgs e)
         {
-
+            caretaker.Undo();
         }
 
         private void calculatorButtonClear_Click(object sender, EventArgs e)
         {
+            caretaker.Backup();
+            calculator.Clear();
+        }
 
+        private void calculatorButton0_Click(object sender, EventArgs e)
+        {
+            caretaker.Backup();
+            calculator.Constant("0");
+
+            outputScreen.Text += "0";
+        }
+
+        private void calculatorButton1_Click(object sender, EventArgs e)
+        {
+            caretaker.Backup();
+            calculator.Constant("1");
+
+            outputScreen.Text += "1";
+        }
+
+        private void calculatorButton2_Click(object sender, EventArgs e)
+        {
+            caretaker.Backup();
+            calculator.Constant("2");
+
+            outputScreen.Text += "2";
+        }
+
+        private void calculatorButton3_Click(object sender, EventArgs e)
+        {
+            caretaker.Backup();
+            calculator.Constant("3");
+
+            outputScreen.Text += "3";
+        }
+
+        private void calculatorButton4_Click(object sender, EventArgs e)
+        {
+            caretaker.Backup();
+            calculator.Constant("4");
+
+            outputScreen.Text += "4";
+        }
+
+        private void calculatorButton5_Click(object sender, EventArgs e)
+        {
+            caretaker.Backup();
+            calculator.Constant("5");
+
+            outputScreen.Text += "5";
+        }
+
+        private void calculatorButton6_Click(object sender, EventArgs e)
+        {
+            caretaker.Backup();
+            calculator.Constant("6");
+
+            outputScreen.Text += "6";
+        }
+
+        private void calculatorButton7_Click(object sender, EventArgs e)
+        {
+            caretaker.Backup();
+            calculator.Constant("7");
+
+            outputScreen.Text += "7";
+        }
+
+        private void calculatorButton8_Click(object sender, EventArgs e)
+        {
+            caretaker.Backup();
+            calculator.Constant("8");
+
+            outputScreen.Text += "8";
+        }
+
+        private void calculatorButton9_Click(object sender, EventArgs e)
+        {
+            caretaker.Backup();
+            calculator.Constant("9");
+
+            outputScreen.Text += "9";
+        }
+
+        private void calculatorButtonMultiply_Click(object sender, EventArgs e)
+        {
+            caretaker.Backup();
+            calculator.Multiply();
+
+            outputScreen.Text = "";
+        }
+
+        private void calculatorButtonDivide_Click(object sender, EventArgs e)
+        {
+            caretaker.Backup();
+            calculator.Divide();
+
+            outputScreen.Text = "";
+        }
+
+        private void calculatorAdd_Click(object sender, EventArgs e)
+        {
+            caretaker.Backup();
+            calculator.Add();
+
+            outputScreen.Text = "";
+        }
+
+        private void calculatorButtonSubtract_Click(object sender, EventArgs e)
+        {
+            caretaker.Backup();
+            calculator.Subtract();
+
+            outputScreen.Text = "";
+        }
+
+        private void calculatorButtonDecimalPoint_Click(object sender, EventArgs e)
+        {
+            if (outputScreen.Text[outputScreen.Text.Length - 1] == '.')
+            {
+                return;
+            }
+
+            caretaker.Backup();
+            calculator.DecimalPoint();
+
+            outputScreen.Text += ".";
+        }
+
+        private void calculatorButtonEquals_Click(object sender, EventArgs e)
+        {
+            caretaker.Backup();
+
+            String solution = calculator.Solve();
+
+            outputScreen.Text = solution;
         }
     }
 }

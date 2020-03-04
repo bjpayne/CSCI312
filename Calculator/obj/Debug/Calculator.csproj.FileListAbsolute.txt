@@ -16,3 +16,5 @@ C:\Projects\CSCI312\Calculator\obj\Debug\Calculator.Form1.zh.resources
 C:\Projects\CSCI312\Calculator\obj\Debug\en\Calculator.resources.dll
 C:\Projects\CSCI312\Calculator\obj\Debug\fr\Calculator.resources.dll
 C:\Projects\CSCI312\Calculator\obj\Debug\zh\Calculator.resources.dll
+C:\Projects\CSCI312\Calculator\bin\Debug\NCalc.dll
+C:\Projects\CSCI312\Calculator\obj\Debug\Calculator.csproj.CopyComplete

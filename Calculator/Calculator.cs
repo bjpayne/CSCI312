@@ -1,32 +1,93 @@
-﻿using System;
+﻿using NCalc;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Calculator
 {
     class Calculator
     {
-        public void Add(Decimal number)
+        private List<String> expressions = new List<string>();
+
+        public void Constant(String number)
         {
-            // Todo: Implement Add Method
+            expressions.Add(number);
         }
 
-        public void Subtract (Decimal number)
+        public void Add()
         {
-            // Todo: Implement Substract
+            expressions.Add("+");
         }
 
-        public void Multiply (Decimal number)
+        public void Subtract()
         {
-            // Todo: Implement Multiply
+            if (expressions.Count == 0)
+            {
+                Constant("0");
+            }
+
+            expressions.Add("-");
         }
 
-        public void Divide (Decimal number)
+        public void Multiply()
         {
-            // Todo: Implement Divide
-            // Check for 0
+            if (expressions.Count == 0)
+            {
+                return;
+            }
+
+            expressions.Add("*");
+        }
+
+        public void Divide()
+        {
+            if (expressions.Count == 0)
+            {
+                return;
+            }
+
+            expressions.Add("/");
+        }
+
+        public void DecimalPoint()
+        {
+            if (expressions.Count == 0)
+            {
+                return;
+            }
+
+            expressions.Add(".");
+        }
+
+        public String Solve()
+        {
+            try
+            {
+                Expression expression = new Expression(String.Join(" ", expressions.ToArray()));
+
+                String solution = expression.Evaluate().ToString();
+
+                Clear();
+
+                return solution;
+            } catch (Exception)
+            {
+                return "Invalid input.";
+            }
+        }
+
+        public IMemento Save()
+        {
+            return new Memento(expressions);
+        }
+
+        public void Restore(IMemento memento)
+        {
+            expressions = memento.GetState();
+        }
+
+        public void Clear()
+        {
+            expressions.Clear();
         }
     }
 }

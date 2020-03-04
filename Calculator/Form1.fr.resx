@@ -142,17 +142,29 @@
   <data name="editMenuItem.Text" xml:space="preserve">
     <value>éditer</value>
   </data>
+  <data name="englishLanguageMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 22</value>
+  </data>
   <data name="chineeseLanguageMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>117, 22</value>
   </data>
   <data name="chineeseLanguageMenuItem.Text" xml:space="preserve">
     <value>中文</value>
   </data>
+  <data name="frenchLanguageMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 22</value>
+  </data>
   <data name="frenchLanguageMenuItem.Text" xml:space="preserve">
     <value>Francais</value>
   </data>
+  <data name="languageMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 22</value>
+  </data>
   <data name="languageMenuItem.Text" xml:space="preserve">
     <value>Langue</value>
+  </data>
+  <data name="aboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 22</value>
   </data>
   <data name="aboutMenuItem.Text" xml:space="preserve">
     <value>Propos</value>

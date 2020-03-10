@@ -42,6 +42,8 @@ namespace Calculator
                 default:
                     break;
             }
+
+            undoMenuItem.Enabled = false;
         }
 
         private void ExitMenuItem_Click(object sender, EventArgs e)
@@ -107,18 +109,26 @@ namespace Calculator
 
         private void undoMenuItem_Click(object sender, EventArgs e)
         {
-            caretaker.Undo();
+            Int32 mementosCount = caretaker.Undo();
+
+            undoMenuItem.Enabled = mementosCount > 0;
+
+            outputScreen.Text = calculator.ToString();
         }
 
         private void calculatorButtonClear_Click(object sender, EventArgs e)
         {
-            caretaker.Backup();
+            caretaker.Clear();
+
             calculator.Clear();
+
+            outputScreen.Text = "";
+
+            undoMenuItem.Enabled = false;
         }
 
         private void calculatorButton0_Click(object sender, EventArgs e)
         {
-            caretaker.Backup();
             calculator.Constant("0");
 
             outputScreen.Text += "0";
@@ -126,7 +136,6 @@ namespace Calculator
 
         private void calculatorButton1_Click(object sender, EventArgs e)
         {
-            caretaker.Backup();
             calculator.Constant("1");
 
             outputScreen.Text += "1";
@@ -134,7 +143,6 @@ namespace Calculator
 
         private void calculatorButton2_Click(object sender, EventArgs e)
         {
-            caretaker.Backup();
             calculator.Constant("2");
 
             outputScreen.Text += "2";
@@ -142,7 +150,6 @@ namespace Calculator
 
         private void calculatorButton3_Click(object sender, EventArgs e)
         {
-            caretaker.Backup();
             calculator.Constant("3");
 
             outputScreen.Text += "3";
@@ -150,7 +157,6 @@ namespace Calculator
 
         private void calculatorButton4_Click(object sender, EventArgs e)
         {
-            caretaker.Backup();
             calculator.Constant("4");
 
             outputScreen.Text += "4";
@@ -158,7 +164,6 @@ namespace Calculator
 
         private void calculatorButton5_Click(object sender, EventArgs e)
         {
-            caretaker.Backup();
             calculator.Constant("5");
 
             outputScreen.Text += "5";
@@ -166,7 +171,6 @@ namespace Calculator
 
         private void calculatorButton6_Click(object sender, EventArgs e)
         {
-            caretaker.Backup();
             calculator.Constant("6");
 
             outputScreen.Text += "6";
@@ -174,7 +178,6 @@ namespace Calculator
 
         private void calculatorButton7_Click(object sender, EventArgs e)
         {
-            caretaker.Backup();
             calculator.Constant("7");
 
             outputScreen.Text += "7";
@@ -182,7 +185,6 @@ namespace Calculator
 
         private void calculatorButton8_Click(object sender, EventArgs e)
         {
-            caretaker.Backup();
             calculator.Constant("8");
 
             outputScreen.Text += "8";
@@ -190,7 +192,6 @@ namespace Calculator
 
         private void calculatorButton9_Click(object sender, EventArgs e)
         {
-            caretaker.Backup();
             calculator.Constant("9");
 
             outputScreen.Text += "9";
@@ -199,33 +200,46 @@ namespace Calculator
         private void calculatorButtonMultiply_Click(object sender, EventArgs e)
         {
             caretaker.Backup();
+
             calculator.Multiply();
 
             outputScreen.Text = "";
+
+            caretaker.Backup();
+            undoMenuItem.Enabled = true;
         }
 
         private void calculatorButtonDivide_Click(object sender, EventArgs e)
         {
             caretaker.Backup();
+
             calculator.Divide();
 
             outputScreen.Text = "";
+
+            undoMenuItem.Enabled = true;
         }
 
         private void calculatorAdd_Click(object sender, EventArgs e)
         {
             caretaker.Backup();
+
             calculator.Add();
 
             outputScreen.Text = "";
+
+            undoMenuItem.Enabled = true;
         }
 
         private void calculatorButtonSubtract_Click(object sender, EventArgs e)
         {
             caretaker.Backup();
+
             calculator.Subtract();
 
             outputScreen.Text = "";
+
+            undoMenuItem.Enabled = true;
         }
 
         private void calculatorButtonDecimalPoint_Click(object sender, EventArgs e)
@@ -235,7 +249,6 @@ namespace Calculator
                 return;
             }
 
-            caretaker.Backup();
             calculator.DecimalPoint();
 
             outputScreen.Text += ".";
@@ -243,11 +256,18 @@ namespace Calculator
 
         private void calculatorButtonEquals_Click(object sender, EventArgs e)
         {
+            if (calculator.ToString() == "")
+            {
+                return;
+            }
+
             caretaker.Backup();
 
             String solution = calculator.Solve();
 
             outputScreen.Text = solution;
+
+            undoMenuItem.Enabled = true;
         }
     }
 }

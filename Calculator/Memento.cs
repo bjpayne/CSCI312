@@ -5,21 +5,21 @@ namespace Calculator
 {
     class Memento : IMemento
     {
-        private List<String> Expressions { get; set; }
+        private String expression;
 
-        public Memento(List<String> Expressions)
+        public Memento(string expression)
         {
-            this.Expressions = Expressions;
+            this.expression = expression;
         }
 
-        public List<string> GetState()
+        public String GetState()
         {
-            return Expressions;
+            return expression;
         }
 
-        public void SetState(List<String> Expressions)
+        public void SetState(String expression)
         {
-            this.Expressions = Expressions;
+            this.expression = expression;
         }
     }
 }

@@ -118,17 +118,23 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="fileMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 20</value>
+  </data>
+  <data name="fileMenuItem.Text" xml:space="preserve">
+    <value>Fichier</value>
+  </data>
   <data name="exitMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>111, 22</value>
   </data>
   <data name="exitMenuItem.Text" xml:space="preserve">
     <value>Quitter</value>
   </data>
-  <data name="fileMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 20</value>
+  <data name="editMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 20</value>
   </data>
-  <data name="fileMenuItem.Text" xml:space="preserve">
-    <value>Fichier</value>
+  <data name="editMenuItem.Text" xml:space="preserve">
+    <value>éditer</value>
   </data>
   <data name="undoMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>110, 22</value>
@@ -136,11 +142,17 @@
   <data name="undoMenuItem.Text" xml:space="preserve">
     <value>défaire</value>
   </data>
-  <data name="editMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 20</value>
+  <data name="helpMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 20</value>
   </data>
-  <data name="editMenuItem.Text" xml:space="preserve">
-    <value>éditer</value>
+  <data name="helpMenuItem.Text" xml:space="preserve">
+    <value>Aide</value>
+  </data>
+  <data name="languageMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 22</value>
+  </data>
+  <data name="languageMenuItem.Text" xml:space="preserve">
+    <value>Langue</value>
   </data>
   <data name="englishLanguageMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>117, 22</value>
@@ -157,23 +169,11 @@
   <data name="frenchLanguageMenuItem.Text" xml:space="preserve">
     <value>Francais</value>
   </data>
-  <data name="languageMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 22</value>
-  </data>
-  <data name="languageMenuItem.Text" xml:space="preserve">
-    <value>Langue</value>
-  </data>
   <data name="aboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 22</value>
   </data>
   <data name="aboutMenuItem.Text" xml:space="preserve">
     <value>Propos</value>
-  </data>
-  <data name="helpMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 20</value>
-  </data>
-  <data name="helpMenuItem.Text" xml:space="preserve">
-    <value>Aide</value>
   </data>
   <data name="calculatorButtonClear.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 50</value>

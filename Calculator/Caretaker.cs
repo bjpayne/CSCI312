@@ -19,28 +19,30 @@ namespace Calculator
             mementos.Push(calculator.Save());
         }
 
-        public void Undo()
+        public Int32 Undo()
         {
-            if (this.mementos.Count == 0)
-            {
-                return;
-            }
-
-            IMemento memento = this.mementos.Pop();
-
             try
             {
+                if (this.mementos.Count == 0)
+                {
+                    return 0;
+                }
+
+                IMemento memento = this.mementos.Pop();
+
                 calculator.Restore(memento);
+
+                return this.mementos.Count;
             }
             catch (Exception)
             {
-                this.Undo();
+                return this.mementos.Count;
             }
         }
 
         public void Clear()
         {
-            calculator.Clear();
+            mementos.Clear();
         }
     }
 }

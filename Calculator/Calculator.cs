@@ -1,93 +1,106 @@
 ﻿using NCalc;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace Calculator
 {
     class Calculator
     {
-        private List<String> expressions = new List<string>();
+        private String expression = "";
+
+        private Int32 runningTotal = 0;
 
         public void Constant(String number)
         {
-            expressions.Add(number);
+            expression += number;
         }
 
         public void Add()
         {
-            expressions.Add("+");
+            expression += " + ";
         }
 
         public void Subtract()
         {
-            if (expressions.Count == 0)
-            {
-                Constant("0");
-            }
-
-            expressions.Add("-");
+            expression += " - ";
         }
 
         public void Multiply()
         {
-            if (expressions.Count == 0)
+            if (expression.Length == 0)
             {
                 return;
             }
 
-            expressions.Add("*");
+            expression += " * ";
         }
 
         public void Divide()
         {
-            if (expressions.Count == 0)
+            if (expression.Length == 0)
             {
                 return;
             }
 
-            expressions.Add("/");
+            expression += " / ";
         }
 
         public void DecimalPoint()
         {
-            if (expressions.Count == 0)
+            if (expression.Length == 0)
             {
                 return;
             }
 
-            expressions.Add(".");
+            expression += " . ";
         }
 
         public String Solve()
         {
             try
             {
-                Expression expression = new Expression(String.Join(" ", expressions.ToArray()));
+                Expression expression = new Expression(this.expression);
 
                 String solution = expression.Evaluate().ToString();
 
-                Clear();
+                this.expression = "";
+
+                Int32 addToRunningTotal = 0;
+
+                Int32.TryParse(solution, out addToRunningTotal);
+
+                this.runningTotal = addToRunningTotal;
 
                 return solution;
-            } catch (Exception)
+            } catch (Exception e)
             {
-                return "Invalid input.";
+                Debug.WriteLine(e);
+
+                return "error";
             }
         }
 
         public IMemento Save()
         {
-            return new Memento(expressions);
+            return new Memento(expression);
         }
 
         public void Restore(IMemento memento)
         {
-            expressions = memento.GetState();
+            expression = memento.GetState();
         }
 
         public void Clear()
         {
-            expressions.Clear();
+            expression = "";
+
+            runningTotal = 0;
+        }
+
+        public override String ToString()
+        {
+            return expression;
         }
     }
 }

@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/Users/benjaminpayne/Apps/CSCI280/Programs/BubbleSort/BubbleSort/BubbleSort.csproj",
+    "projectUniqueName": "/Users/benjaminpayne/Apps/CSCI312/Programs/BubbleSort/BubbleSort/BubbleSort.csproj",
     "projectName": "BubbleSort",
-    "projectPath": "/Users/benjaminpayne/Apps/CSCI280/Programs/BubbleSort/BubbleSort/BubbleSort.csproj",
-    "outputPath": "/Users/benjaminpayne/Apps/CSCI280/Programs/BubbleSort/BubbleSort/obj/",
+    "projectPath": "/Users/benjaminpayne/Apps/CSCI312/Programs/BubbleSort/BubbleSort/BubbleSort.csproj",
+    "outputPath": "/Users/benjaminpayne/Apps/CSCI312/Programs/BubbleSort/BubbleSort/obj/",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

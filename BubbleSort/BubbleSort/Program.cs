@@ -63,7 +63,7 @@ namespace BubbleSort
             Console.WriteLine("Bubble Sort duration for {0} elements = {1} ms", randomListLength, timeSpan.TotalMilliseconds);
         }
 
-        static Int32[] BuiltInSort(Int32[] randomList)
+        static void BuiltInSort(Int32[] randomList)
         {
             DateTime start = DateTime.Now;
             DateTime end;
@@ -75,8 +75,6 @@ namespace BubbleSort
             TimeSpan timeSpan = end.Subtract(start);
 
             Console.WriteLine("Builtin duration for {0} elements = {1} ms", randomList.Length, timeSpan.TotalMilliseconds);
-
-            return randomList;
         }
     }
 }

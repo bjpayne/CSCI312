@@ -17,7 +17,7 @@ namespace HuffmanEncodingProject
          * 2. Sort the nodes by character
          * 3. Group nodes adjacent characters, combining their counts
          */
-        public void Build(String input)
+        public void Hydrate(String input)
         {
             for (Int32 i = 0; i < input.Length; i++)
             {

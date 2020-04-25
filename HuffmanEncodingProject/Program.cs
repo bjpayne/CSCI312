@@ -21,7 +21,25 @@ namespace HuffmanEncodingProject
 
             Console.WriteLine("Reading input...");
 
-            StreamReader inputReader = new StreamReader(fileName);
+            StreamReader inputReader = null;
+
+            while (inputReader == null)
+            {
+                try
+                {
+                    inputReader = new StreamReader(fileName);
+                }
+                catch (FileNotFoundException e)
+                {
+                    Console.WriteLine(e.Message);
+                    
+                    Console.Write("Please enter the file name: ");
+
+                    fileName = Console.ReadLine();
+                    
+                    Console.Clear();
+                }
+            }
 
             String input = inputReader.ReadToEnd();
 
@@ -31,7 +49,7 @@ namespace HuffmanEncodingProject
 
             Tree tree = new Tree();
 
-            tree.Build(input);
+            tree.Hydrate(input);
 
             Console.WriteLine("Encoding input...");
 

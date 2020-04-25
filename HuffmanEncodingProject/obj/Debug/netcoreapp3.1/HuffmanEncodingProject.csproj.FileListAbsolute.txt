@@ -1,0 +1,10 @@
+/Users/benjaminpayne/Apps/CSCI312/Programs/HuffmanEncodingProject/bin/Debug/netcoreapp3.1/HuffmanEncodingProject.deps.json
+/Users/benjaminpayne/Apps/CSCI312/Programs/HuffmanEncodingProject/bin/Debug/netcoreapp3.1/HuffmanEncodingProject.runtimeconfig.json
+/Users/benjaminpayne/Apps/CSCI312/Programs/HuffmanEncodingProject/bin/Debug/netcoreapp3.1/HuffmanEncodingProject.runtimeconfig.dev.json
+/Users/benjaminpayne/Apps/CSCI312/Programs/HuffmanEncodingProject/bin/Debug/netcoreapp3.1/HuffmanEncodingProject.dll
+/Users/benjaminpayne/Apps/CSCI312/Programs/HuffmanEncodingProject/bin/Debug/netcoreapp3.1/HuffmanEncodingProject.pdb
+/Users/benjaminpayne/Apps/CSCI312/Programs/HuffmanEncodingProject/obj/Debug/netcoreapp3.1/HuffmanEncodingProject.csprojAssemblyReference.cache
+/Users/benjaminpayne/Apps/CSCI312/Programs/HuffmanEncodingProject/obj/Debug/netcoreapp3.1/HuffmanEncodingProject.AssemblyInfoInputs.cache
+/Users/benjaminpayne/Apps/CSCI312/Programs/HuffmanEncodingProject/obj/Debug/netcoreapp3.1/HuffmanEncodingProject.AssemblyInfo.cs
+/Users/benjaminpayne/Apps/CSCI312/Programs/HuffmanEncodingProject/obj/Debug/netcoreapp3.1/HuffmanEncodingProject.dll
+/Users/benjaminpayne/Apps/CSCI312/Programs/HuffmanEncodingProject/obj/Debug/netcoreapp3.1/HuffmanEncodingProject.pdb

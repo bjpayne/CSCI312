@@ -11,3 +11,9 @@ C:/Users/bkowa/source/repos/GraphDataStructure/GraphDataStructure/obj/Debug/Grap
 /Users/benjaminpayne/Downloads/GraphDataStructure/GraphDataStructure/obj/Debug/GraphDataStructure.csprojAssemblyReference.cache
 /Users/benjaminpayne/Downloads/GraphDataStructure/GraphDataStructure/obj/Debug/GraphDataStructure.exe
 /Users/benjaminpayne/Downloads/GraphDataStructure/GraphDataStructure/obj/Debug/GraphDataStructure.pdb
+/Users/benjaminpayne/Apps/CSCI312/Programs/GraphDataStructure/GraphDataStructure/bin/Debug/GraphDataStructure.exe.config
+/Users/benjaminpayne/Apps/CSCI312/Programs/GraphDataStructure/GraphDataStructure/bin/Debug/GraphDataStructure.exe
+/Users/benjaminpayne/Apps/CSCI312/Programs/GraphDataStructure/GraphDataStructure/bin/Debug/GraphDataStructure.pdb
+/Users/benjaminpayne/Apps/CSCI312/Programs/GraphDataStructure/GraphDataStructure/obj/Debug/GraphDataStructure.csprojAssemblyReference.cache
+/Users/benjaminpayne/Apps/CSCI312/Programs/GraphDataStructure/GraphDataStructure/obj/Debug/GraphDataStructure.exe
+/Users/benjaminpayne/Apps/CSCI312/Programs/GraphDataStructure/GraphDataStructure/obj/Debug/GraphDataStructure.pdb

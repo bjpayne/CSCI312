@@ -5,11 +5,11 @@ namespace HuffmanEncodingProject
 {
     public class Node : IEquatable<Node>, IComparable<Node>
     {
-        public Char Symbol { get; set; }
-        public Int32 Frequency { get; set; }
-        public Node Right { get; set; }
-        public Node Left { get; set; }
-
+        public Int32 CharacterCount { get; set; }
+        public Node RightNode { get; set; }
+        public Node LeftNode { get; set; }
+        public Char NodeSymbol { get; set; }
+        
         /**
          * 1. If the node is leaf and the current Trees' symbol matches return the data or null
          * 2. If the left node is not null then initialize a new set of left nodes and add the data to each. Set next to bin 0
@@ -17,15 +17,15 @@ namespace HuffmanEncodingProject
          */
         public List<Boolean> Walk(Char symbol, List<Boolean> data)
         {
-            if (Right == null && Left == null)
+            if (RightNode == null && LeftNode == null)
             {
-                return symbol.Equals(Symbol) ? data : null;
+                return symbol.Equals(NodeSymbol) ? data : null;
             }
 
             List<Boolean> left = null;
             List<Boolean> right = null;
 
-            if (Left != null)
+            if (LeftNode != null)
             {
                 List<Boolean> leftNodes = new List<Boolean>();
 
@@ -37,10 +37,10 @@ namespace HuffmanEncodingProject
                 // Set to bin 0
                 leftNodes.Add(false);
 
-                left = Left.Walk(symbol, leftNodes);
+                left = LeftNode.Walk(symbol, leftNodes);
             }
 
-            if (Right != null)
+            if (RightNode != null)
             {
                 List<Boolean> rightNodes = new List<Boolean>();
 
@@ -52,7 +52,7 @@ namespace HuffmanEncodingProject
                 // Set to bin 1
                 rightNodes.Add(true);
 
-                right = Right.Walk(symbol, rightNodes);
+                right = RightNode.Walk(symbol, rightNodes);
             }
 
             // Left is not null then left else right
@@ -62,7 +62,7 @@ namespace HuffmanEncodingProject
         public Int32 CompareTo(Node node)
         {
             // A null value means that this object is greater.
-            return node == null ? 1 : Symbol.CompareTo(node.Symbol);
+            return node == null ? 1 : NodeSymbol.CompareTo(node.NodeSymbol);
         }
 
         public Boolean Equals(Node other)
@@ -77,10 +77,10 @@ namespace HuffmanEncodingProject
                 return true;
             }
 
-            return Symbol == other.Symbol &&
-                   Frequency == other.Frequency &&
-                   Equals(Right, other.Right) &&
-                   Equals(Left, other.Left);
+            return NodeSymbol == other.NodeSymbol &&
+                   CharacterCount == other.CharacterCount &&
+                   Equals(RightNode, other.RightNode) &&
+                   Equals(LeftNode, other.LeftNode);
         }
 
         public override Boolean Equals(Object obj)
@@ -105,7 +105,7 @@ namespace HuffmanEncodingProject
 
         public override Int32 GetHashCode()
         {
-            return HashCode.Combine(Symbol, Frequency, Right, Left);
+            return HashCode.Combine(NodeSymbol, CharacterCount, RightNode, LeftNode);
         }
     }
 }

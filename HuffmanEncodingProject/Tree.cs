@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Collections;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace HuffmanEncodingProject
 {
@@ -31,7 +33,7 @@ namespace HuffmanEncodingProject
 
             foreach ((Char key, Int32 value) in characterCounts)
             {
-                nodes.Add(new Node() {Symbol = key, Frequency = value});
+                nodes.Add(new Node() {NodeSymbol = key, CharacterCount = value});
             }
             
             nodes.Sort();
@@ -44,10 +46,10 @@ namespace HuffmanEncodingProject
 
                     Node characterParentNode = new Node()
                     {
-                        Symbol = '+',
-                        Frequency = taken[0].Frequency + taken[1].Frequency,
-                        Left = taken[0],
-                        Right = taken[1]
+                        NodeSymbol = '+',
+                        CharacterCount = taken[0].CharacterCount + taken[1].CharacterCount,
+                        LeftNode = taken[0],
+                        RightNode = taken[1]
                     };
 
                     nodes.Remove(taken[0]);
@@ -70,13 +72,24 @@ namespace HuffmanEncodingProject
 
             for (Int32 i = 0; i < input.Length; i++)
             {
-                List<Boolean> encodedSymbol = ParentNode.Walk(input[i], new List<Boolean>());
-                
-                // Append the symbols to the end of the list
-                encodedInputCharacters.AddRange(encodedSymbol);
+                // Recursively walk through the nodes to find a leaf node
+                List<Boolean> encodedBits = ParentNode.Walk(input[i], new List<Boolean>());
+
+                 // Append the symbols to the end of the list
+                for (Int32 j = 0; j < encodedBits.Count; j++)
+                {
+                    encodedInputCharacters.Add(encodedBits[j]);
+                }
             }
 
             BitArray bits = new BitArray(encodedInputCharacters.ToArray());
+            
+            StringBuilder encodedBuilder = new StringBuilder();
+
+            for (Int32 i = 0; i < bits.Count; i++)
+            {
+                encodedBuilder.Append(bits[i]);
+            }
 
             return bits;
         }
@@ -91,32 +104,37 @@ namespace HuffmanEncodingProject
         public String Decode(BitArray bits)
         {
             Node current = ParentNode;
+
+            StringBuilder decodedBuilder = new StringBuilder();
             
-            String decoded = "";
-
-            foreach (Boolean bit in bits)
+            for (Int32 i = 0; i < bits.Count; i++)
             {
-                if (bit)
-                {
-                    if (current.Right != null)
-                    {
-                        current = current.Right;
-                    }
-                }
-                else
-                {
-                    if (current.Left != null)
-                    {
-                        current = current.Left;
-                    }
-                }
-
-                if (IsLeaf(current))
-                {
-                    decoded += current.Symbol;
-                    current = ParentNode;
-                }
+                Boolean bit = bits[i];
+                
+                 if (bit)
+                 {
+                     if (current.RightNode != null)
+                     {
+                         current = current.RightNode;
+                     }
+                 }
+                 else
+                 {
+                     if (current.LeftNode != null)
+                     {
+                         current = current.LeftNode;
+                     }
+                 }
+ 
+                 if (IsLeaf(current))
+                 {
+                     decodedBuilder.Append(current.NodeSymbol);
+                     
+                     current = ParentNode;
+                 }               
             }
+
+            String decoded = decodedBuilder.ToString();
 
             return decoded;
         }
@@ -124,7 +142,7 @@ namespace HuffmanEncodingProject
         // If both adjacent nodes are null, the node is a leaf node
         private static Boolean IsLeaf(Node node)
         {
-            return (node.Left == null && node.Right == null);
+            return (node.LeftNode == null && node.RightNode == null);
         }
     }
 }

@@ -67,7 +67,7 @@ namespace HuffmanEncodingProject
 
             for (Int32 i = 0; i < encoded.Count; i++)
             {
-                encodedBuilder.Append(encoded[i]);
+                encodedBuilder.Append(encoded[i] ? "1" : "0");
             }
             
             encodedWriter.WriteLine(encodedBuilder);
